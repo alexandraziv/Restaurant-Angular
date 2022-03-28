@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col offset-1">
+        <h3>{{name.name}}</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6 ml-1">
+        <p><b>Working hours:</b></p>
+        <ul class="text-muted">
+            <li *ngIf="name.days['1']">Monday {{name.days['1'].opens}} - {{name.days['1'].closes}}</li>
+            <li *ngIf="name.days['2']">Tuesday {{name.days['2'].opens}} - {{name.days['2'].closes}}</li>
+            <li *ngIf="name.days['3']">Wednesday {{name.days['3'].opens}} - {{name.days['3'].closes}}</li>
+            <li *ngIf="name.days['4']">Thursday {{name.days['4'].opens}} - {{name.days['4'].closes}}</li>
+            <li *ngIf="name.days['5']">Friday {{name.days['5'].opens}} - {{name.days['5'].closes}}</li>
+            <li *ngIf="name.days['6']">Saturday {{name.days['6'].opens}} - {{name.days['6'].closes}}</li>
+            <li *ngIf="name.days['7']">Sunday {{name.days['7'].opens}} - {{name.days['7'].closes}}</li>
+        </ul>
+    </div>
+
+    <div class="col-4 ml-auto">
+        <p><b>Address:</b></p>
+        <p class="text-muted">{{name.location}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <table class="table col-12">
+            <thead>
+                <th>Name</th>
+                <th>Price</th>
+            </thead>
+    
+            <tbody>
+                <tr *ngFor="let m of menus.items">
+                    <td>{{m.name}}</td>
+                    <td>{{m.price}} $</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

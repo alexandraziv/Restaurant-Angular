@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem; height: 14rem;">
+    <div class="card-body">
+      <h5 class="card-title text-primary pointerHand" (click)="open()">{{restourant.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{restourant.description}}</h6>
+      <p class="text-muted">Price: <app-img [num]="restourant.price" [full]="'coin-full.png'" [empty]="'coin-empty.png'"></app-img></p>
+      <p class="text-muted">Rating: <app-img [num]="restourant.rating" [full]="'star-full.png'" [empty]="'star-empty.png'"></app-img></p>
+    </div>
+  </div>
